@@ -9,8 +9,10 @@ potentially undervalued stocks. The list is updated every day at 8 AM UTC using
 Install dependencies and start the application with `uvicorn`:
 
 ```bash
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+pip install poetry
+poetry install
+poetry shell
+poetry run uvicorn app.main:app --reload
 ```
 
 Access the list at `http://localhost:8000/undervalued`.
